@@ -8,36 +8,32 @@
 <div class="card">
             <div class="card-header">
               <h3 class="card-title">Peminjaman</h3>
+              <a href="{{url('createpeminjaman')}}"><button type="button" class="btn btn-info float-right">tambah</button></a>
             </div>
-<div class="card-body">
+
+     <!-- /.card-header -->
+
+            <div class="card-body">
               <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                 <th>#</th>
+                  <th>tanggal pinjam</th>
+                  <th>tanggal kembali</th>
+                  <th>user</th>
+                  <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
+                  <td>terew</td>
+                  <td>fdgfv</td>
+                  <td>bgfxcv</td>
+                  <td>bgfxcv</td>
+                  <td>
+                      <button type="button" class="btn btn-info">edit</button>
+                      <button type="button" class="btn btn-danger">Delete</button>
                   </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5</td>
-                  <td>C</td>
                 </tr>
               </table>
             </div>

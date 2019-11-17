@@ -19,8 +19,11 @@ Auth::routes();
 Route::get('/dasboard', 'DasboardController@index');
 Route::get('/inventaris', 'InventarisController@index');
 Route::get('/createinventaris', 'InventarisController@create');
-Route::get('/createinventaris', 'InventarisController@store');
+Route::post('/createinventaris', 'InventarisController@store');
+
 Route::get('/laporan', 'LaporanController@index');
 Route::get('/user', 'UserController@index');
 Route::get('/peminjaman', 'PeminjamanController@index');
+Route::get('/createpeminjaman', 'PeminjamanController@create');
+Route::get('/createpeminjaman', 'PeminjamanController@store');
 Route::get('/pengembalian', 'PengembalianController@index');

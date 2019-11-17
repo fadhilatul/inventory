@@ -16,6 +16,8 @@
               <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-remove"></i></button>
             </div>
           </div>
+          <form action="{{url('createinventaris')}}" method="post">
+              {{csrf_field()}}
           <!-- /.card-header -->
           <div class="card-body">
             <div class="row">
@@ -39,19 +41,29 @@
                 <!-- /.form-group -->
                 <div class="form-group">
                   <label>jenis</label>
-                  <input type="text" name="jenis" value="{{ old('jenis') }}" class="form-control" placeholder="jenis">
+                  <select class="form-control select2bs4" name="jenis" style="width: 100%;">
+                    @foreach($jenis as $jenisis)
+                  <option value="{{$jenisis->id}}">{{$jenisis->nama_jenis}}</option>
+                  @endforeach
+                  </select>
+                  <!-- <input type="text" name="jenis" value="{{ old('jenis') }}" class="form-control" placeholder="jenis"> -->
                 </div>
                 <!-- /.form-group -->
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label>tanggal registrasi</label>
-                  <input type="texx" name="tanggal registrasi" value="{{ old('tanggal registrasi') }}" class="form-control" placeholder="tanggal registrasi">
+                  <input type="date" name="tanggal registrasi" value="{{ old('tanggal registrasi') }}" class="form-control" placeholder="tanggal registrasi">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                   <label>ruangan</label>
-                  <input type="text" name="ruangan" value="{{ old('ruangan') }}" class="form-control" placeholder="ruangan">
+                  <select class="form-control select2bs4" name="ruangan" style="width: 100%;">
+                  @foreach($ruangan as $ruangans)
+                  <option value="{{$ruangans->id}}">{{$ruangans->nama_ruangan}}</option>
+                  @endforeach
+                  </select>
+                  <!-- <input type="text" name="ruangan" value="{{ old('ruangan') }}" class="form-control" placeholder="ruangan"> -->
                 </div>
                 <!-- /.form-group -->
               </div>
@@ -66,13 +78,16 @@
                   <label>jumlah</label>
                   <input type="text" name="jumlah" value="{{ old('jumlah') }}" class="form-control" placeholder="jumlah">
                 </div>
+                <button type="submit" class="btn btn-info float-right">tambah</button>
                 <!-- /.form-group -->
               </div>
+</from>
               <!-- /.col -->
                 <!-- /.form-group -->
               </div>
               <!-- /.col -->
             </div>
+
             <!-- /.row -->
           </div>
           <!-- /.card-body -->

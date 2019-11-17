@@ -13,31 +13,23 @@
               <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                  <th>Inventaris</th>
+                  <th>Peminjaman</th>
+                  <th>Jumlah</th>
+                  <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                  <td>Trident</td>
                   <td>Internet
                     Explorer 4.0
                   </td>
                   <td>Win 95+</td>
                   <td> 4</td>
-                  <td>X</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.0
+                  <td>
+                      <button type="button" class="btn btn-info">edit</button>
+                      <button type="button" class="btn btn-danger">Delete</button>
                   </td>
-                  <td>Win 95+</td>
-                  <td>5</td>
-                  <td>C</td>
                 </tr>
               </table>
             </div>
